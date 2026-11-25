@@ -40,16 +40,16 @@
 
         layer_1 {
             bindings = <
-&trans  &trans  &trans  &trans     &trans     &trans                  &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans     &trans                  &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &trans  &mkp RCLK  &mkp LCLK  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp RCLK  &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans
+&none   &none        &none        &none        &none        &none                                &none        &none        &none        &none          &none       &none
+&none   &kp JP_QUOT  &kp JP_DQUO  &kp JP_EXLM  &kp JP_AMPR  &kp JP_TILD                          &kp JP_YEN   &kp JP_UNDS  &kp JP_LBRC  &kp JP_RBRC  &kp JP_PERC   &none
+&none   &kp JP_AT    &kp JP_HASH  &kp JP_DLR   &kp JP_SLSH  &kp JP_QUES  &none          &none    &kp JP_CIRC  &kp JP_PIPE  &kp JP_LPRN  &kp JP_RPRN  &kp JP_EQL    &none
+&none   &kp JP_PLUS  &kp JP_SCLN  &kp JP_COLN  &kp JP_ASTR  &kp JP_GRV   &kp ESC        &kp RET  &kp JP_EQL   &kp JP_MINS  &kp JP_LCBR  &kp JP_RCBR  &kp JP_QUES   &none
+&trans  &trans       &trans       &trans       &trans       &trans       &trans         &trans   &trans       &none        &none        &trans       &trans        &none
 #if defined(TORABO_TSUKI_LP_KSCAN_4_DIRECTION_SWITCH)
 &msc SCRL_UP &msc SCRL_DOWN &msc SCRL_LEFT &msc SCRL_RIGHT &mkp MCLK
 #elif defined(TORABO_TSUKI_LP_INPUT_HIRES_DIAL)
 &mkp MCLK
 #endif
-&trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans
             >;
         };
 
