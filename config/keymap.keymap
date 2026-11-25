@@ -23,14 +23,14 @@
 
         combo_l1 {
              key-positions = <34 35>;
-                bindings = <&mo 1>;
+                bindings = <&sl 1>;
                 layers = <0>;
                 timeout-ms = <50>;
         };
 
         combo_l2 {
              key-positions = <26 27>;
-                bindings = <&mo 2>;
+                bindings = <&sl 2>;
                 layers = <0>;
                 timeout-ms = <50>;
         };
