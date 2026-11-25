@@ -142,7 +142,8 @@
 #elif defined(TORABO_TSUKI_LP_INPUT_HIRES_DIAL)
 &hires_dial_radial_controller_button
 #endif
-
+            >;
+        };
 /*
                 layer_teplate {
             bindings = <
