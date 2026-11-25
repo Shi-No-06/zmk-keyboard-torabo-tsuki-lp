@@ -13,10 +13,26 @@
     combos {
         compatible = "zmk,combos";
 
+        /*
         bt_clear {
             bindings = <&bt BT_CLR>;
             key-positions = <28 29>;
             layers = <2>;
+        };
+        */
+
+        combo_l1 {
+             key-positions = <34 35>;
+                bindings = <&mo 1>;
+                layers = <0>;
+                timeout-ms = <50>;
+        };
+
+        combo_l2 {
+             key-positions = <26 27>;
+                bindings = <&mo 2>;
+                layers = <0>;
+                timeout-ms = <50>;
         };
     };
 
@@ -59,7 +75,7 @@
 &none   &none        &kp HOME  &kp UP_ARROW  &kp END    &none                                &kp JP_PERC    &kp N7  &kp N8  &kp N9  &kp JP_EQL   &none
 &none   &kp LSHIFT   &kp LEFT  &kp DOWN      &kp RIGHT  &kp JP_COLN  &none          &none    &kp JP_PLUS    &kp N4  &kp N5  &kp N6  &kp JP_MINS  &none
 &none   &none        &none     &none         &kp BSPC   &kp JP_DOT   &trans         &trans   &kp JP_ASTR    &kp N1  &kp N2  &kp N3  &kp JP_SLSH  &none
-&none   &trans       &trans    &trans        &trans     &trans       &trans         &trans   &mt N0 LSHIFT  &none        &none        &trans       &trans        &none
+&none   &trans       &trans    &trans        &trans     &trans       &trans         &trans   &mt LSHIFT N0  &none        &none        &trans       &trans        &none
 #if defined(TORABO_TSUKI_LP_KSCAN_4_DIRECTION_SWITCH)
 &msc SCRL_UP &msc SCRL_DOWN &msc SCRL_LEFT &msc SCRL_RIGHT &mkp MCLK
 #elif defined(TORABO_TSUKI_LP_INPUT_HIRES_DIAL)
@@ -86,7 +102,7 @@
         layer_4 {
             bindings = <
 &none  &none          &none           &none          &none         &none                                 &none  &none  &none  &none  &none  &none 
-&none  &none          &none           &none          &none         &none                                 &none  &none  &none  &none  &none  &none 
+&none  &out OUT_USB   &out OUT_BLE    &none          &none         &none                                 &none  &none  &none  &none  &none  &none 
 &none  &bt BT_SEL 0   &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4  &none            &none  &none  &none  &none  &none  &none  &none 
 &none  &none          &none           &none          &none         &none         &bt BT_CLR       &none  &none  &none  &none  &none  &none  &none 
 &none  &none          &none           &none          &none         &none         &none            &none  &none  &none  &none  &none  &none  &none 
