@@ -37,8 +37,8 @@
                 timeout-ms = <50>;
         };
 
-        // レイヤー3
-        combo_l3 {
+        // レイヤー2
+        combo_l3_2 {
              key-positions = <57 60>;
                 bindings = <&sl 3>;
                 layers = <0>;
