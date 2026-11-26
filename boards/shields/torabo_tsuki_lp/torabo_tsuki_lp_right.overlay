@@ -5,8 +5,16 @@
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
 
+// オートマウスレーヤーのオプション
+&zip_temp_layer {
+    require-prior-idle-ms = <200>;            // キー入力後、自動切替を抑止する時間
+    excluded-positions = <18 20 32 33 34 35>; // AMLを解除しない物理キーの位置番号
+};
+
 &pointing_listener {
-    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
+    input-processors = 
+        <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
+        <&zip_temp_layer 5 200>; // オートマウスレイヤー、対象マウスレイヤー、解除時間(ms)
 
     scroller {
     layers = <6>;
